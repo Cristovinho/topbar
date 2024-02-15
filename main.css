@@ -1,0 +1,112 @@
+:root {
+  --primary-color: #2cc09c;
+  --secondary-color: #212529;
+  --primary-font: Roboto, sans-serif;
+}
+.topbar {
+  font-size: 12px;
+  font-family: var(--primary-font);
+  color: #fff;
+  background: var(--secondary-color);
+}
+
+.topbar__container {
+  max-width: 1016px;
+  margin: 0 auto;
+}
+
+.topbar li,
+.topbar a {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.topbar svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+}
+
+.topbar ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.topbar__infos {
+  background: var(--primary-color);
+}
+
+.topbar__links svg,
+.topbar__links a:hover {
+  color: var(--primary-color);
+}
+
+.topbar .topbar__lang {
+  margin-left: auto;
+}
+
+.topbar .topbar__lang a {
+  padding-right: 0;
+}
+
+.topbar__lang a::after {
+  content: "";
+  display: inline-block;
+  border-top: 6px solid #fff;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+  margin-left: 4px;
+}
+
+@media only screen and (min-width: 730px) {
+  .topbar {
+    font-size: 14px;
+    background: linear-gradient(
+      to right,
+      var(--primary-color),
+      var(--primary-color) 50%,
+      var(--secondary-color) 50.01%,
+      var(--secondary-color)
+    );
+  }
+  .topbar__container {
+    display: flex;
+    justify-content: space-between;
+    background: var(--secondary-color);
+  }
+  .topbar li,
+  .topbar a {
+    height: 55px;
+  }
+  .topbar svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  .topbar__infos li:last-child {
+    background: var(--secondary-color);
+    padding-left: 0;
+  }
+  .topbar__infos li:last-child svg {
+    color: var(--primary-color);
+  }
+  .topbar__infos li:last-child::before {
+    content: "";
+    display: inline-block;
+    border-bottom: 55px solid var(--primary-color);
+    border-right: 33px solid transparent;
+  }
+}
